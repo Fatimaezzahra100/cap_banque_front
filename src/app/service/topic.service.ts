@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Topic } from '../forum/topic/topic';
+import { Topic } from '../component/topic/topic';
 import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
