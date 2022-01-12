@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
-import { ForumModule } from './forum.module';
+import { ForumModule } from './forumSection/forum.module';
 
 @NgModule({
   declarations: [

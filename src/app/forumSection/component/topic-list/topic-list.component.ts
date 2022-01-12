@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TopicService } from 'src/app/service/topic.service';
+import { TopicService } from 'src/app/forumSection/service/topic.service';
 import { Topic } from '../topic/topic';
 @Component({
   selector: 'topic-list',
