@@ -1,6 +1,7 @@
 * {
     text-decoration: none;
     color:black;
+    font-size:12px;
 }
 
 .topic{
@@ -9,19 +10,29 @@
     &:hover{
         background-color: #c1b6e9;
     }
-    .topic__message__number{
-        text-decoration: none;
+    p{
+        margin-bottom: 0;
     }
-    .topic__name{
-        font-size:17px;
-        color:#6e70e4;
+   .topic__header{
+       position:relative;
+       margin-bottom: 20px;
+        .topic__header__name{
+            font-weight: bold;
+            vertical-align: bottom;
+            font-size: 15px;
+        }
+       .topic__category__name{
+        position: absolute;
+        right:-5px;
+        top:-5px;
+        border:1px solid rgb(125, 125, 202);
+        background-color: rgb(125, 125, 202);
         font-weight: bold;
-        text-decoration: none;
-    }
-    .topic__author{
-        font-size:12px;
-        color:black;
-        font-style: none;
-        text-decoration: none;
-    }
+        color:white;
+        padding:10px;
+        width:100px;
+        }
+   }
+   .topic__footer{
+   }
 }

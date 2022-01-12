@@ -1,19 +1,23 @@
 <div class="container topic">
-    <a href="#">
-        <div class="row">
-            <div class="col-1 d-flex justify-content-center align-items-center">
-                <i class="bi bi-bell h6"></i>
+    <a routerLink="/forum/categories/3">
+        <div class="topic__header d-flex">
+            <p class="topic__header__name">{{topic.name}}</p>
+            <p class="topic__category__name">{{topic.category.name}}</p>
+        </div>
+        <div class="topic__content">
+            {{topic.content}}
+        </div>
+        <div class="topic__footer d-flex justify-content-between mt-4">
+            <div class="d-flex col-7">
+                <p class="topic__footer__author">Par {{topic.author}}</p>
+                <p class="ms-2 topic__footer__date">11 janvier</p>
+                <p class="ms-2 topic__footer__hour">16 : 45</p>
+
             </div>
-            <div class="col-6 d-flex justify-content-start align-items-center">
-                <p class="topic__name mb-0">{{topic.name}}</p>
-            </div>
-            <div class="col-3 d-flex justify-content-start align-items-center">
-                <p class="topic__message__number mb-0">440 000 </p>
-            </div>
-            <div class="col-2 topic__author">
-                <p class="mb-0">{{topic.created_at}} à 18h24 </p>
-                <p class="mb-0">par {{topic.author}}</p>
+            <div col="d-flex col-3">
+                <p class="topic__footer__messages">38 commentaires</p>
             </div>
         </div>
     </a>
 </div>
+
