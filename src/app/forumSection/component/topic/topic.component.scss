@@ -5,34 +5,44 @@
 }
 
 .topic{
-    border:1px solid black;
-    padding:5px;
-    &:hover{
-        background-color: #c1b6e9;
-    }
+    border:1px solid rgb(175, 175, 175);
+    border-bottom:none;
+    padding:8px;
     p{
         margin-bottom: 0;
     }
    .topic__header{
        position:relative;
-       margin-bottom: 20px;
+       margin-bottom: 30px;
         .topic__header__name{
             font-weight: bold;
             vertical-align: bottom;
             font-size: 15px;
+            &:hover{
+                animation: changeColor 0.4s linear both ;
+                @keyframes changeColor {
+                    0%{
+                        color:black;
+                    }
+                    100%{
+                        color:rgb(64, 196, 232);
+                    }
+                
+                }
+            }
         }
        .topic__category__name{
         position: absolute;
-        right:-5px;
-        top:-5px;
-        border:1px solid rgb(125, 125, 202);
-        background-color: rgb(125, 125, 202);
+        right:0px;
+        top:0px;
+        border-radius: 10px;
+        border:2px solid rgb(130, 130, 207);
+        background-color: rgb(145, 145, 219);
         font-weight: bold;
         color:white;
         padding:10px;
         width:100px;
+        text-align: center;
         }
-   }
-   .topic__footer{
    }
 }

@@ -1,0 +1,20 @@
+.topic{
+    border:1px solid #CCCCCC;
+    padding:15px;
+    border-radius: 5px;
+}
+
+.answer__form{
+    border-top:3px solid rgb(33, 33, 92);
+    padding-top: 20px;
+}
+
+.response__number{
+    font-size:20px;
+    color:rgb(33, 33, 92);
+}
+
+.answer{
+    border-bottom:1px dashed gray;
+    padding:20px;
+}

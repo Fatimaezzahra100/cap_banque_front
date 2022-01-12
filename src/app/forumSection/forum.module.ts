@@ -10,9 +10,11 @@ import { CategoryListComponent } from './component/category-list/category-list.c
 import { CategoryComponent } from './component/category/category.component';
 import { CategoryService } from './service/category.service';
 import { HomeComponent } from './component/home/home.component';
+import { TopicDetailComponent } from './component/topic-detail/topic-detail.component';
 const routes: Routes = [
-  { path: 'home', component: HomeComponent }
-
+  { path: '', component: HomeComponent },
+  // { path: 'categories/:id' },
+  { path: 'topics/:id', component: TopicDetailComponent }
 ]
 
 @NgModule({
@@ -24,6 +26,7 @@ const routes: Routes = [
     CategoryListComponent,
     CategoryComponent,
     HomeComponent,
+    TopicDetailComponent,
   ],
   imports: [
     CommonModule,

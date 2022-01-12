@@ -1,8 +1,23 @@
-p{
-    cursor: pointer;
-    margin:30px;
+*{
+    text-decoration: none;
+    color:black;
+    margin:20px;
 }
 
-p:hover{
-    color:blue;
+a:hover{
+  
+    animation: changeeColor 0.4s linear both ;
+
+
+}
+
+    
+@keyframes changeeColor {
+    0%{
+        color:black;
+    }
+    100%{
+        color:blue;
+    }
+
 }
