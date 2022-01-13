@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './component/home/home.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
+import { CompteAddComponent } from './MainPage/component/compte/compte-add/compte-add.component';
+import { CompteConsultComponent } from './MainPage/component/compte/compte-consult/compte-consult.component';
+import { CompteEditComponent } from './MainPage/component/compte/compte-edit/compte-edit.component';
+import { HomeComponent } from './MainPage/component/home/home.component';
+import { NavbarComponent } from './MainPage/component/navbar/navbar.component';
 import { ForumModule } from './forumSection/forum.module';
 
 @NgModule({
@@ -12,6 +15,10 @@ import { ForumModule } from './forumSection/forum.module';
     AppComponent,
     HomeComponent,
     NavbarComponent,
+    CompteConsultComponent,
+    CompteAddComponent,
+    CompteEditComponent
+   
   ],
   imports: [
     BrowserModule,

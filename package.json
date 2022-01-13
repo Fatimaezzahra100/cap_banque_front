@@ -18,9 +18,19 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "bootstrap": "^4.6.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@fortawesome/fontawesome-free": "5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-regular-svg-icons": "5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@ng-bootstrap/ng-bootstrap": "^11.0.0",
+    "core-js": "3.8.3",
+    "jquery": "3.6.0",
+    "ngf-bootstrap": "0.0.5",
+    "toastr": "2.1.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.2",
