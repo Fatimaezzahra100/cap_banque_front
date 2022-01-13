@@ -5,7 +5,7 @@
 }
 
 a:hover{
-  
+    text-decoration: none;
     animation: changeeColor 0.4s linear both ;
 
 

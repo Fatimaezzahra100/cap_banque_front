@@ -8,7 +8,10 @@
     border-top:3px solid rgb(33, 33, 92);
     padding-top: 20px;
 }
-
+.topic__name{
+    color:rgb(226, 43, 104);
+    font-weight: bold;
+}
 .response__number{
     font-size:20px;
     color:rgb(33, 33, 92);

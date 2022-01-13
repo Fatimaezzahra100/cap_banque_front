@@ -19,13 +19,16 @@
             vertical-align: bottom;
             font-size: 15px;
             &:hover{
+                text-decoration: none;
                 animation: changeColor 0.4s linear both ;
                 @keyframes changeColor {
                     0%{
                         color:black;
+                        text-decoration: none;
                     }
                     100%{
                         color:rgb(64, 196, 232);
+                        text-decoration: none;
                     }
                 
                 }
