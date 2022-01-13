@@ -11,9 +11,10 @@ import { CategoryComponent } from './component/category/category.component';
 import { CategoryService } from './service/category.service';
 import { HomeComponent } from './component/home/home.component';
 import { TopicDetailComponent } from './component/topic-detail/topic-detail.component';
+import { CategoryDetailComponent } from './component/category-detail/category-detail.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  // { path: 'categories/:id' },
+  { path: 'categories/:id', component: CategoryDetailComponent },
   { path: 'topics/:id', component: TopicDetailComponent }
 ]
 
@@ -27,6 +28,7 @@ const routes: Routes = [
     CategoryComponent,
     HomeComponent,
     TopicDetailComponent,
+    CategoryDetailComponent,
   ],
   imports: [
     CommonModule,

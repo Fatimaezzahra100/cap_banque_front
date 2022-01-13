@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <h3>Messages sur le forum {{category.name}}</h3>
+    </div>
+    <div class="header mt-1 row">
+        <div class="col-5 d-flex align-items-center">
+            <input type="text" name="search" id="search">
+        </div>
+        <div class="col-3">
+            <button>Filtrer</button>
+        </div>
+    </div>
+    <div class="topics mt-2">
+        <div class="row">
+            <div class="col-6">
+                <p>SUJET</p>
+            </div>
+            <div class="col-3">
+                <p>DERNIERE REPONSE</p>
+            </div>
+            <div class="col-3">
+                <p class="text-center">MESSAGES</p>
+            </div>
+        </div>
+        <div class="row" *ngFor="let topic of topics">
+            <div class="col-6">
+                <a routerLink="/forum/topics/{{topic.id }}">{{topic.name}}</a>
+                <div class="d-flex">
+                    <p>Par {{topic.author}}</p>
+                    <p class="mb-0 ml-1">point</p>
+                    <p class="mb-0 ml-1">26 novembre 2021 17:27</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <p class="mb-0">26 novembre 2021 17:27</p>
+                <p class="mb-0">Par {{topic.author}}</p>
+            </div>
+            <div class="col-3">
+                <p class="text-center mb-0">20</p>
+            </div>
+        </div>
+    </div>
+</div>

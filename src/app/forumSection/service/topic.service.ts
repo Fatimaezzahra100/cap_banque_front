@@ -72,6 +72,7 @@ export class TopicService {
 
 
   ]
+
   getTopics(): Observable<Topic[]> {
 
     return of(this.TOPICS);
@@ -85,5 +86,9 @@ export class TopicService {
     return of(topic);
   }
 
+  getByCategory(id: number): Observable<Topic[]> {
+    let topics = this.TOPICS.filter(topics => topics.category.id === id);
+    return of(topics);
+  }
 
 }
