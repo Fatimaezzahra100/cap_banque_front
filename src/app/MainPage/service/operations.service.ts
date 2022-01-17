@@ -28,24 +28,17 @@ export class OperationsService {
     
     this.getOperations().subscribe((response) => 
       {
-          var matchingFrequences = response.filter(
-            (operation) => operation.frequence.toString().toLowerCase().indexOf(term) > -1 
+       
+          var matchingOperations = response.filter(
+            (operation) => operation.frequence.toString().toLowerCase().indexOf(term) > -1 || operation.operationDate.toString().toLowerCase().indexOf(term) > -1 || operation.amount.toString().toLowerCase().indexOf(term) > -1 || operation.compteSenderId.toString().toLowerCase().indexOf(term) > -1 || operation.operationId.toString().toLowerCase().indexOf(term) > -1 
             
           );
-          /*
-          var matchingDates = response.filter(
-            (operation) => operation.operationDate.toString().toLowerCase().indexOf(term) > -1 
-            
-          );
-          var matchingAmount = response.filter(
-            (operation) => operation.amount.toString().toLowerCase().indexOf(term) > -1 
-            
-          );
-          var matchingSender = response.filter(
-            (operation) => (operation.compteReceiver != null) ? operation.compteSender.compteId.toString().toLowerCase().indexOf(term) > -1 : null
-            
-          );
+          
+        
 
+          /*
+        
+          //Quand on affichera le nom du receveur à la place de l'id rib il faudra filtrer dessus
           
           var matchingReceiverIn= response.filter(
             (operation) => (operation.compteReceiver != undefined) ? operation.compteReceiver.compteId.toString().toLowerCase().indexOf(term) > -1 : null
@@ -57,12 +50,9 @@ export class OperationsService {
             
           );
 
-          var matchingId = response.filter(
-            (operation) => operation.operationId.toString().toLowerCase().indexOf(term) > -1 
-            
-          );*/
+          */
 
-          results = results.concat(matchingFrequences);
+          results = results.concat(matchingOperations);
         
       }
     );
