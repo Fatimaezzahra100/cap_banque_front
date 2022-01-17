@@ -16,7 +16,6 @@ export class CommentCreateComponent implements OnInit {
   }
 
   addComment(topicId:number,values:any):void{
-    console.log('ok');
     const comment = {
       id:2,
       content:values.content,

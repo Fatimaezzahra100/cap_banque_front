@@ -18,6 +18,7 @@ import { CommentCreateComponent } from './component/comment-create/comment-creat
 import { FormsModule } from '@angular/forms';
 import { CommentService } from './service/comment.service';
 import { SubCommentService } from './service/sub-comment.service';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'categories/:id', component: CategoryDetailComponent },
@@ -42,7 +43,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     TopicService,

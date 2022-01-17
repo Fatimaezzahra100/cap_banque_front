@@ -8,11 +8,16 @@ import { Category } from '../category/category';
 })
 export class CategoryListComponent implements OnInit {
   categories: Category[] = [];
+  loading:boolean = false;
   constructor(private categoryService: CategoryService) {
   }
 
   ngOnInit(): void {
-    this.categoryService.getCategories().subscribe(categories => this.categories = categories);
+    this.loading = true;
+    this.categoryService.getCategories().subscribe(categories =>{
+      this.categories = categories['hydra:member'];
+      this.loading = false
+    });
   }
 
 }

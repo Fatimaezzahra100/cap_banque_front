@@ -12,7 +12,6 @@ export class CommentService {
 
   addComment(topicId: number, comment: Comment): Observable<Comment> {
     this.topicService.getTopic(Number(topicId)).subscribe(topicElement =>this.topic = topicElement);
-    console.log(this.topic);
     if(this.topic !== undefined){
       this.topic.comments?.push(comment);
     }else{

@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../component/category/category';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-
-  constructor() { }
+  private apiurl:string = "http://localhost:8080/api/categories/";
+  constructor(private http:HttpClient) { }
 
   CATEGORY: Category[] = [
     {
@@ -40,15 +41,11 @@ export class CategoryService {
 
   ]
 
-  getCategories(): Observable<Category[]> {
-    return of(this.CATEGORY);
+  getCategories(): Observable<any> {
+  return this.http.get<any>(this.apiurl);
   }
 
-  getCategory(id: number): Observable<Category> {
-    const category = this.CATEGORY.find(category => category.id === id);
-    if (category === undefined) {
-      return of();
-    }
-    return of(category);
+  getCategory(id: number): Observable<any> {
+    return this.http.get<any>(this.apiurl + id );
   }
 }

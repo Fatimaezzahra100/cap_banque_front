@@ -25,18 +25,18 @@
                 <p class="text-center">MESSAGES</p>
             </div>
         </div>
-        <div class="row" *ngFor="let topic of topics">
+        <div class="row" *ngFor="let topic of category.topic">
             <div class="col-6">
                 <a routerLink="/forum/topics/{{topic.id }}">{{topic.title}}</a>
                 <div class="d-flex">
-                    <p>Par {{topic.author.username}}</p>
+                    <p>Par topic.author.username</p>
                     <p class="mb-0 ml-1">point</p>
                     <p class="mb-0 ml-1">26 novembre 2021 17:27</p>
                 </div>
             </div>
             <div class="col-3">
                 <p class="mb-0">26 novembre 2021 17:27</p>
-                <p class="mb-0">Par {{topic.author.username}}</p>
+                <p class="mb-0">Par topic.author.username</p>
             </div>
             <div class="col-3">
                 <p class="text-center mb-0">20</p>

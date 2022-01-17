@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Topic } from '../component/topic/topic';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { userList } from './user-provider';
 @Injectable({
   providedIn: 'root'
 })
 export class TopicService {
-
-  constructor() { }
+  private apiUrl:string = "http://localhost:8080/api/topics/";
 
   TOPICS: Topic[] = [
     {
@@ -83,17 +83,14 @@ export class TopicService {
 
   ]
 
-  getTopics(): Observable<Topic[]> {
+  constructor(private http:HttpClient) { }
 
-    return of(this.TOPICS);
+  getTopics(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
   }
 
-  getTopic(id: number): Observable<Topic> {
-    let topic = this.TOPICS.find(topics => topics.id === id);
-    if (topic === undefined) {
-      return of();
-    }
-    return of(topic);
+  getTopic(id: number): Observable<any> {
+    return this.http.get<any>(this.apiUrl+id);
   }
 
   getByCategory(id: number): Observable<Topic[]> {
