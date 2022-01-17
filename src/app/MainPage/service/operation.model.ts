@@ -5,10 +5,10 @@ import { Rib } from "./rib.model";
 export interface Operation {
     operationId:number;
     amount: number;
-    compteSender: Compte;
+    compteSenderId: number;
     operationDate: Date;
     frequence: Frequence;
     ribReceiver?: Rib,
-    compteReceiver?: Compte;
+    compteReceiverId?: number;
     
 }

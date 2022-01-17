@@ -1,8 +1,6 @@
-import { User } from "./user.model";
-
 export interface Compte {
     compteId: number;
-    user: User;
+    userId: number;
     accountNumber: number;
     balance: number;
     creationDate: Date;

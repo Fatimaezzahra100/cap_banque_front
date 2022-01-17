@@ -5,12 +5,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CompteAddComponent } from './MainPage/component/compte/compte-add/compte-add.component';
-import { CompteConsultComponent } from './MainPage/component/compte/compte-consult/compte-consult.component';
-import { CompteEditComponent } from './MainPage/component/compte/compte-edit/compte-edit.component';
 import { HomeComponent } from './MainPage/component/home/home.component';
 import { NavbarComponent } from './MainPage/component/navbar/navbar.component';
 import { OperationsComponent } from './MainPage/component/operations/operations.component';
+import { SoldeCompteCourantComponent } from './MainPage/component/compte/solde-compte-courant/solde-compte-courant.component';
 
 
 @NgModule({
@@ -18,10 +16,8 @@ import { OperationsComponent } from './MainPage/component/operations/operations.
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    CompteConsultComponent,
-    CompteAddComponent,
-    CompteEditComponent,
-    OperationsComponent
+    OperationsComponent,
+    SoldeCompteCourantComponent
    
   ],
   imports: [

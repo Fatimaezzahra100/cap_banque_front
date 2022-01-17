@@ -39,12 +39,11 @@
     <tbody>
         
             <tr *ngFor="let operation of operations">
-                <td class="text-center">{{operation?.operationDate | date: 'dd/MM/yyyy'}}</td>
+                <td class="text-center">{{operation?.operationDate | date: 'dd/MM/yyyy hh:mm a'}}</td>
                 <td class="text-center">{{operation?.amount | currency:'EUR'}}</td>
-                <td class="text-center">{{operation?.compteSender}}</td>
-                <td class="text-center"*ngIf="operation?.compteReceiver">{{operation?.compteReceiver}}</td>
-                <td class="text-center" *ngIf="operation?.ribReceiver">{{operation?.ribReceiver}}</td>
-                <td class="text-center">null</td>
+                <td class="text-center">Compte #{{operation?.compteSenderId}}</td>
+                <td class="text-center"*ngIf="operation?.compteReceiverId">Compte #{{operation?.compteReceiverId}}</td>
+                <td class="text-center" *ngIf="operation?.ribReceiver">Rib #{{operation?.ribReceiver?.ribId}}</td>
                 <td class="text-center">{{operation?.frequence}}</td>
                 <td class="text-center">{{operation?.operationId}}</td>
             </tr>

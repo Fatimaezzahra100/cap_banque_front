@@ -12,10 +12,12 @@ import { environment } from "src/environments/environment";
 export class OperationsService {
 
   private apiServerUrl = environment.apiBaseUrl;
+  private currentUserId = 1;    // recuperer le userId de authentication.service !
+
   constructor(private http:HttpClient){};
 
   getOperations(): Observable<Operation[]> {
-   return this.http.get<Operation[]>(`${this.apiServerUrl}/banking/operations/all`);
+   return this.http.get<Operation[]>(`${this.apiServerUrl}/banking/users/${this.currentUserId}/ops`);
     
   }
 
@@ -30,6 +32,7 @@ export class OperationsService {
             (operation) => operation.frequence.toString().toLowerCase().indexOf(term) > -1 
             
           );
+          /*
           var matchingDates = response.filter(
             (operation) => operation.operationDate.toString().toLowerCase().indexOf(term) > -1 
             
@@ -57,7 +60,7 @@ export class OperationsService {
           var matchingId = response.filter(
             (operation) => operation.operationId.toString().toLowerCase().indexOf(term) > -1 
             
-          );
+          );*/
 
           results = results.concat(matchingFrequences);
         

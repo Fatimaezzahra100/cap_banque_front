@@ -1,8 +1,6 @@
-import { User } from "./user.model";
-
 export interface Rib {
     ribId: number;
-    user: User;
+    userId: number;
     iban: String;
     bic: String;
 

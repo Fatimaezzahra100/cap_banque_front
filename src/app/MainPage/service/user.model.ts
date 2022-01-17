@@ -8,6 +8,9 @@ export interface User {
     firstName: String;
     email: String;
     address: String;
-    comptes?: Compte[];
+    comptesEpargne?: Compte[];
+    compteCourantId: number;
+    ribId: number;
+    tel: number;
     operations?: Operation[];
 }
