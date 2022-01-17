@@ -14,6 +14,10 @@ import { TopicDetailComponent } from './component/topic-detail/topic-detail.comp
 import { CategoryDetailComponent } from './component/category-detail/category-detail.component';
 import { CommentComponent } from './component/comment/comment.component';
 import { SubCommentComponent } from './component/sub-comment/sub-comment.component';
+import { CommentCreateComponent } from './component/comment-create/comment-create.component';
+import { FormsModule } from '@angular/forms';
+import { CommentService } from './service/comment.service';
+import { SubCommentService } from './service/sub-comment.service';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'categories/:id', component: CategoryDetailComponent },
@@ -33,14 +37,18 @@ const routes: Routes = [
     CategoryDetailComponent,
     CommentComponent,
     SubCommentComponent,
+    CommentCreateComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule
   ],
   providers: [
     TopicService,
-    CategoryService
+    CategoryService,
+    CommentService,
+    SubCommentService
   ]
 })
 export class ForumModule { }

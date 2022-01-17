@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Topic } from '../component/topic/topic';
 import { Observable, of } from 'rxjs';
+import { userList } from './user-provider';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ export class TopicService {
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis a temporibus fuga, quod eius voluptates praesentium mollitia ipsa autem eos commodi exercitationem quae ex iste, eveniet voluptas eaque sed aliquid eum illum quibusdam? Atque suscipit alias eligendi ex officia magni recusandae ducimus praesentium facilis. Vitae at ipsum modi odio eos, quisquam, dolorem, vel nihil accusantium minima fuga suscipit voluptatum consequuntur eius doloribus. Autem itaque eum placeat asperiores pariatur nostrum excepturi in velit qui maiores totam unde, exercitationem neque recusandae necessitatibus fugit dolor provident corporis doloremque consequuntur? Et tenetur aut repellendus repellat, doloremque neque, iusto deleniti eius quasi vero architecto illum, facere vel. Eligendi vel cum accusamus ipsum? Laboriosam sunt, maxime est veritatis rem incidunt voluptates nesciunt officia. Fugiat, accusantium.',
       created_at: new Date('05/05/2020'),
       updated_at: new Date('05/05/2020'),
-      author: 'Alexandre',
+      author: userList[0],
       category: {
         id: 1,
         name: "category1"
@@ -28,7 +29,7 @@ export class TopicService {
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis a temporibus fuga, quod eius voluptates praesentium mollitia ipsa autem eos commodi exercitationem quae ex iste, eveniet voluptas eaque sed aliquid eum illum quibusdam? Atque suscipit alias eligendi ex officia magni recusandae ducimus praesentium facilis. Vitae at ipsum modi odio eos, quisquam, dolorem, vel nihil accusantium minima fuga suscipit voluptatum consequuntur eius doloribus. Autem itaque eum placeat asperiores pariatur nostrum excepturi in velit qui maiores totam unde, exercitationem neque recusandae necessitatibus fugit dolor provident corporis doloremque consequuntur? Et tenetur aut repellendus repellat, doloremque neque, iusto deleniti eius quasi vero architecto illum, facere vel. Eligendi vel cum accusamus ipsum? Laboriosam sunt, maxime est veritatis rem incidunt voluptates nesciunt officia. Fugiat, accusantium.',
       created_at: new Date('05/05/2020'),
       updated_at: new Date('05/05/2020'),
-      author: 'Alexandre',
+      author: userList[0],
       category: {
         id: 2,
         name: "category2"
@@ -42,7 +43,7 @@ export class TopicService {
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis a temporibus fuga, quod eius voluptates praesentium mollitia ipsa autem eos commodi exercitationem quae ex iste, eveniet voluptas eaque sed aliquid eum illum quibusdam? Atque suscipit alias eligendi ex officia magni recusandae ducimus praesentium facilis. Vitae at ipsum modi odio eos, quisquam, dolorem, vel nihil accusantium minima fuga suscipit voluptatum consequuntur eius doloribus. Autem itaque eum placeat asperiores pariatur nostrum excepturi in velit qui maiores totam unde, exercitationem neque recusandae necessitatibus fugit dolor provident corporis doloremque consequuntur? Et tenetur aut repellendus repellat, doloremque neque, iusto deleniti eius quasi vero architecto illum, facere vel. Eligendi vel cum accusamus ipsum? Laboriosam sunt, maxime est veritatis rem incidunt voluptates nesciunt officia. Fugiat, accusantium.',
       created_at: new Date('05/05/2020'),
       updated_at: new Date('05/05/2020'),
-      author: 'Alexandre',
+      author: userList[0],
       category: {
         id: 2,
         name: "category2"
@@ -56,7 +57,7 @@ export class TopicService {
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis a temporibus fuga, quod eius voluptates praesentium mollitia ipsa autem eos commodi exercitationem quae ex iste, eveniet voluptas eaque sed aliquid eum illum quibusdam? Atque suscipit alias eligendi ex officia magni recusandae ducimus praesentium facilis. Vitae at ipsum modi odio eos, quisquam, dolorem, vel nihil accusantium minima fuga suscipit voluptatum consequuntur eius doloribus. Autem itaque eum placeat asperiores pariatur nostrum excepturi in velit qui maiores totam unde, exercitationem neque recusandae necessitatibus fugit dolor provident corporis doloremque consequuntur? Et tenetur aut repellendus repellat, doloremque neque, iusto deleniti eius quasi vero architecto illum, facere vel. Eligendi vel cum accusamus ipsum? Laboriosam sunt, maxime est veritatis rem incidunt voluptates nesciunt officia. Fugiat, accusantium.',
       created_at: new Date('05/05/2020'),
       updated_at: new Date('05/05/2020'),
-      author: 'Alexandre',
+      author: userList[0],
       category: {
         id: 3,
         name: "category3"
@@ -70,7 +71,7 @@ export class TopicService {
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nobis a temporibus fuga, quod eius voluptates praesentium mollitia ipsa autem eos commodi exercitationem quae ex iste, eveniet voluptas eaque sed aliquid eum illum quibusdam? Atque suscipit alias eligendi ex officia magni recusandae ducimus praesentium facilis. Vitae at ipsum modi odio eos, quisquam, dolorem, vel nihil accusantium minima fuga suscipit voluptatum consequuntur eius doloribus. Autem itaque eum placeat asperiores pariatur nostrum excepturi in velit qui maiores totam unde, exercitationem neque recusandae necessitatibus fugit dolor provident corporis doloremque consequuntur? Et tenetur aut repellendus repellat, doloremque neque, iusto deleniti eius quasi vero architecto illum, facere vel. Eligendi vel cum accusamus ipsum? Laboriosam sunt, maxime est veritatis rem incidunt voluptates nesciunt officia. Fugiat, accusantium.',
       created_at: new Date('05/05/2020'),
       updated_at: new Date('05/05/2020'),
-      author: 'Alexandre',
+      author: userList[0],
       category: {
         id: 2,
         name: "category2"

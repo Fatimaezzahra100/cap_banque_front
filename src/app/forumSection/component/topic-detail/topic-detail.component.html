@@ -7,7 +7,7 @@
             <h3 class="topic__name">{{topic.title}}</h3>
             <div class="topic">
                 <div class="topic__header">
-                    <p class="mb-0">{{topic.author}}</p>
+                    <p class="mb-0">{{topic.author.username}}</p>
                     <div class="topic__header__date d-flex justify-content-start mb-4">
                         <p class="mb-0">10 janvier 2022</p>
                         <p class="ml-2 mb-0">16:45</p>
@@ -20,105 +20,25 @@
         </div>
     </div>
     <div class="row answer__form">
-        <p class="response__number">38 réponses</p>
+        <p class="response__number">{{topic.comments?.length}} réponses</p>
     </div>
-    <p>//FORMULAIRE CREATION MESSAGE AU TOPIC</p>
+    <comment-create [topicId]="topic.id"></comment-create>
     <div class="row answers">
-        <div class="answer">
+        <div *ngFor="let topic of topic.comments" class="answer col-12">
             <div class="topic__header">
-                <p class="mb-0">Author</p>
+                <p class="mb-0">{{topic.user.username}}</p>
                 <div class="topic__header__date d-flex justify-content-start mb-4">
                     <p class="mb-0">10 janvier 2022</p>
                     <p class="ml-2 mb-0">16:45</p>
                 </div>
             </div>
             <div class="topic__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint natus placeat voluptatum consectetur
-                nemo nihil debitis, minus, iusto architecto est facere quod id explicabo odit aut aliquid aperiam
-                mollitia impedit maiores beatae aliquam accusamus magni recusandae. Reiciendis rerum saepe ad quam
-                consectetur magni illo tempora velit. Ad impedit tenetur quia?
-            </div>
-        </div>
-        <div class="answer">
-            <div class="topic__header">
-                <p class="mb-0">Author</p>
-                <div class="topic__header__date d-flex justify-content-start mb-4">
-                    <p class="mb-0">10 janvier 2022</p>
-                    <p class="ml-2 mb-0">16:45</p>
-                </div>
-            </div>
-            <div class="topic__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint natus placeat voluptatum consectetur
-                nemo nihil debitis, minus, iusto architecto est facere quod id explicabo odit aut aliquid aperiam
-                mollitia impedit maiores beatae aliquam accusamus magni recusandae. Reiciendis rerum saepe ad quam
-                consectetur magni illo tempora velit. Ad impedit tenetur quia?
-            </div>
-        </div>
-        <div class="answer">
-            <div class="topic__header">
-                <p class="mb-0">Author</p>
-                <div class="topic__header__date d-flex justify-content-start mb-4">
-                    <p class="mb-0">10 janvier 2022</p>
-                    <p class="ml-2 mb-0">16:45</p>
-                </div>
-            </div>
-            <div class="topic__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint natus placeat voluptatum consectetur
-                nemo nihil debitis, minus, iusto architecto est facere quod id explicabo odit aut aliquid aperiam
-                mollitia impedit maiores beatae aliquam accusamus magni recusandae. Reiciendis rerum saepe ad quam
-                consectetur magni illo tempora velit. Ad impedit tenetur quia?
-            </div>
-        </div>
-        <div class="answer">
-            <div class="topic__header">
-                <p class="mb-0">Author</p>
-                <div class="topic__header__date d-flex justify-content-start mb-4">
-                    <p class="mb-0">10 janvier 2022</p>
-                    <p class="ml-2 mb-0">16:45</p>
-                </div>
-            </div>
-            <div class="topic__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint natus placeat voluptatum consectetur
-                nemo nihil debitis, minus, iusto architecto est facere quod id explicabo odit aut aliquid aperiam
-                mollitia impedit maiores beatae aliquam accusamus magni recusandae. Reiciendis rerum saepe ad quam
-                consectetur magni illo tempora velit. Ad impedit tenetur quia?
-            </div>
-        </div>
-        <div class="answer">
-            <div class="topic__header">
-                <p class="mb-0">Author</p>
-                <div class="topic__header__date d-flex justify-content-start mb-4">
-                    <p class="mb-0">10 janvier 2022</p>
-                    <p class="ml-2 mb-0">16:45</p>
-                </div>
-            </div>
-            <div class="topic__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint natus placeat voluptatum consectetur
-                nemo nihil debitis, minus, iusto architecto est facere quod id explicabo odit aut aliquid aperiam
-                mollitia impedit maiores beatae aliquam accusamus magni recusandae. Reiciendis rerum saepe ad quam
-                consectetur magni illo tempora velit. Ad impedit tenetur quia?
-            </div>
-        </div>
-        <div class="answer">
-            <div class="topic__header">
-                <p class="mb-0">Author</p>
-                <div class="topic__header__date d-flex justify-content-start mb-4">
-                    <p class="mb-0">10 janvier 2022</p>
-                    <p class="ml-2 mb-0">16:45</p>
-                </div>
-            </div>
-            <div class="topic__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint natus placeat voluptatum consectetur
-                nemo nihil debitis, minus, iusto architecto est facere quod id explicabo odit aut aliquid aperiam
-                mollitia impedit maiores beatae aliquam accusamus magni recusandae. Reiciendis rerum saepe ad quam
-                consectetur magni illo tempora velit. Ad impedit tenetur quia?
+                {{topic.content}}
             </div>
         </div>
     </div>
     <div class="mt-2">
         <a href="#">Retour à la liste des sujets</a>
     </div>
-    <div class="row answer__form mt-3">
-        //FORMULAIRE CREATION MESSAGE AU TOPIC
-    </div>
+    <comment-create [topicId]="topic.id"></comment-create>
 </div>

@@ -5,6 +5,5 @@ export interface SubComment {
     content:string;
     created_at:Date;
     updated_at:Date;
-    comment:Comment;
     user:User;
 }

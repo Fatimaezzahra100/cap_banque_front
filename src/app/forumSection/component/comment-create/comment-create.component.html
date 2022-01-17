@@ -1,0 +1,10 @@
+<form #commentForm="ngForm" (ngSubmit)="addComment(topicId,commentForm.value)" action="#" class="row">
+    <div class="col-12">
+        <textarea [ngModel]="content" name="content" id="content"></textarea>
+    </div>
+    <div class="mt-2 col-12 d-flex justify-content-end">
+        <button>Poster</button>
+    </div>
+
+
+</form>
