@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forum.component.css']
 })
 export class ForumComponent implements OnInit {
-
+  
   constructor() { }
   
   ngOnInit(): void {
   }
-
+  
 }

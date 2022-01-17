@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <div>
-        <a href="#">Retour à la liste des sujets</a>
+        <a (click)="goBack()">Retour à la liste des sujets</a>
     </div>
     <div class="row mt-4 mb-5">
         <div class="col-12">
@@ -24,21 +24,10 @@
     </div>
     <comment-create [topicId]="topic.id"></comment-create>
     <div class="row answers">
-        <div *ngFor="let topic of topic.comments" class="answer col-12">
-            <div class="topic__header">
-                <p class="mb-0">{{topic.user.username}}</p>
-                <div class="topic__header__date d-flex justify-content-start mb-4">
-                    <p class="mb-0">10 janvier 2022</p>
-                    <p class="ml-2 mb-0">16:45</p>
-                </div>
-            </div>
-            <div class="topic__content">
-                {{topic.content}}
-            </div>
-        </div>
+        <comment *ngFor="let comment of topic.comments" class="answer col-12" [comment]="comment"></comment>
     </div>
     <div class="mt-2">
-        <a href="#">Retour à la liste des sujets</a>
+        <a (click)="goBack()">Retour à la liste des sujets</a>
     </div>
     <comment-create [topicId]="topic.id"></comment-create>
 </div>

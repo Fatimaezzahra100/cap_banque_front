@@ -1,1 +1,13 @@
-<p>comment works!</p>
+<div class="comment__header">
+    <p class="mb-0">{{comment.user.username}}</p>
+    <div class="comment__header__date d-flex justify-content-start mb-4">
+        <p class="mb-0">10 janvier 2022</p>
+        <p class="ml-2 mb-0">16:45</p>
+    </div>
+</div>
+<div class="comment__content">
+    {{comment.content}}
+</div>
+<div class="comment__footer d-flex justify-content-end p-1">
+    <p class="mb-0"><i class="bi bi-chat"></i></p>
+</div>
