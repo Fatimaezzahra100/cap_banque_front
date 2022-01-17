@@ -12,8 +12,10 @@ import { CategoryService } from './service/category.service';
 import { HomeComponent } from './component/home/home.component';
 import { TopicDetailComponent } from './component/topic-detail/topic-detail.component';
 import { CategoryDetailComponent } from './component/category-detail/category-detail.component';
+import { CommentComponent } from './component/comment/comment.component';
+import { SubCommentComponent } from './component/sub-comment/sub-comment.component';
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'categories/:id', component: CategoryDetailComponent },
   { path: 'topics/:id', component: TopicDetailComponent }
 ]
@@ -29,6 +31,8 @@ const routes: Routes = [
     HomeComponent,
     TopicDetailComponent,
     CategoryDetailComponent,
+    CommentComponent,
+    SubCommentComponent,
   ],
   imports: [
     CommonModule,

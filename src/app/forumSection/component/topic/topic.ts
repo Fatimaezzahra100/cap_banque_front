@@ -1,12 +1,15 @@
 import { Category } from "../category/category";
-
+import { Comment } from "../comment/comment";
+import { User } from "src/app/user";
 export interface Topic {
     id: number;
-    name: string;
+    title: string;
     content: string;
     created_at: Date;
-    author: string;
-    category: Category
+    updated_at: Date;
+    author: User;
+    category: Category;
+    comments?: Comment[];
 }
 
 
