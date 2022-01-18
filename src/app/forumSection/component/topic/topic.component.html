@@ -1,7 +1,7 @@
 <div class="container topic">
     
         <div class="topic__header d-flex">
-            <a class="topic__header__name" [routerLink]="['/forum/topics',topic.id]">{{topic.title}}</a>
+            <a class="topic__header__name" [routerLink]="['/forum/topics/',topic.id]">{{topic.title}}</a>
             <p class="topic__category__name">{{topic.category.name}}</p>
         </div>
         
@@ -10,14 +10,14 @@
         </div>
         <div class="topic__footer d-flex justify-content-between mt-4">
             <div class="d-flex col-7">
-                <p class="topic__footer__author">Par topic.author.username</p>
+                <p class="topic__footer__author">Par {{topic.user_id.username}}</p>
                 <p class="ml-2">&bull;</p>
                 <p class="ml-2 topic__footer__date">11 janvier</p>
                 <p class="ml-1 topic__footer__hour">16 : 45</p>
 
             </div>
             <div col="d-flex col-3">
-                <p class="topic__footer__messages">38 commentaires</p>
+                <p class="topic__footer__messages">{{topic.comments?.length}} commentaires </p>
             </div>
         </div>
 </div>

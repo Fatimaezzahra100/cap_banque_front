@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { TopicService } from '../../service/topic.service';
 import { Topic } from '../topic/topic';
@@ -11,14 +11,17 @@ import { Topic } from '../topic/topic';
 })
 export class TopicDetailComponent implements OnInit {
   topic!: Topic;
-  constructor(private router: ActivatedRoute, private topicService: TopicService, private location:Location) { }
+  constructor(private router: ActivatedRoute, private topicService: TopicService, private location: Location) { }
 
   ngOnInit(): void {
     const id = Number(this.router.snapshot.paramMap.get('id'));
-    this.topicService.getTopic(id).subscribe(topic => this.topic = topic);
+    this.topicService.getTopic(id).subscribe(topic => {
+      console.log(topic);
+      this.topic = topic;
+    });
   }
 
-  goBack():void{
+  goBack(): void {
     this.location.back();
   }
 }

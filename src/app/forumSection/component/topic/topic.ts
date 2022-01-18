@@ -7,7 +7,9 @@ export interface Topic {
     content: string;
     created_at: Date;
     updated_at: Date;
-    author: User;
+    user_id: {
+        username:string
+    };
     category: Category;
     comments?: Comment[];
 }

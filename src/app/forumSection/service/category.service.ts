@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../component/category/category';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiurl:string = "http://localhost:8080/api/categories/";
-  constructor(private http:HttpClient) { }
+  private apiurl: string = "http://localhost:8080/api/categories/";
+  constructor(private http: HttpClient) { }
 
   CATEGORY: Category[] = [
     {
@@ -41,11 +41,11 @@ export class CategoryService {
 
   ]
 
-  getCategories(): Observable<any> {
-  return this.http.get<any>(this.apiurl);
+  getCategories(): Observable<Category[]> {
+    return this.http.get<any>(this.apiurl).pipe<Category[]>(map(datas => datas['hydra:member']));
   }
 
   getCategory(id: number): Observable<any> {
-    return this.http.get<any>(this.apiurl + id );
+    return this.http.get<any>(this.apiurl + id);
   }
 }
