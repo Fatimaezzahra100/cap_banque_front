@@ -1,4 +1,5 @@
-import { UserLogin } from './../Model/UserLogin';
+import { User } from './user.model';
+import { UserService } from './user.service';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,34 +7,28 @@ import { Injectable } from '@angular/core';
 })
 export class AuthentificationService {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
-  users: UserLogin[] = [
-    {"userId":1,"userName" : "Fati" , "passeWord" :"xxx" , "roles" : ['admin']},
-    {"userId":2,"userName" : "Laura" , "passeWord" :"yyy" , "roles" : ['user']}
-  ]
-
-  loggedUser : string ="";
+  users :User[] = []; 
+  loggedUser : String ="";
   loggedUserId?: number;
   isLoggedIn : Boolean = false;
-  roles? : string[] ;
-
-  signIn (user :UserLogin):Boolean{
+ 
+  signIn (user :User):Boolean{
+    this.userService.getUsers().subscribe(Response=>this.users=Response);
     let validUser: Boolean=false;
     this.users.forEach((curUser) => {
-      if(user.userName=== curUser.userName && user.passeWord === curUser.passeWord){
+      if(user.userName=== curUser.userName && user.password === curUser.password){
         validUser = true;
         this.loggedUser = curUser.userName;
         this.loggedUserId= curUser.userId;
         this.isLoggedIn=true;
-        this.roles = curUser.roles;
-        localStorage.setItem('loggedUser', this.loggedUser);
+        localStorage.setItem('loggedUser', String(this.loggedUser));
         localStorage.setItem('isLoggedIn', String(this.isLoggedIn));
         localStorage.setItem('userId', String(this.loggedUserId));
       }})
       return validUser;
   }
-
 
   signUp (){
   }

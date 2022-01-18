@@ -9,10 +9,17 @@ import { User } from './user.model';
 })
 export class UserService {
 
-  constructor(private http : HttpClient) { }
+  private apiServerUrl = environment.apiBaseUrl;
+     
+  constructor(private http : HttpClient ) { }
 
   saveUser(user: User):Observable<User>{
-    let host = environment.apiBaseUrl;
-    return this.http.post<User>(host+"/banking/users/save", user);
+    return this.http.post<User>(`${this.apiServerUrl}/banking/users/save`, user);
   }
+
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.apiServerUrl}/banking/users/all`); 
+   }
+
+
 }

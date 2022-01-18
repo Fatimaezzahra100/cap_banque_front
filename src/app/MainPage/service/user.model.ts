@@ -6,7 +6,7 @@ export interface User {
     userName: String;
     lastName: String;
     firstName: String;
-    passeWord: String;
+    password: String;
     email: String;
     address: String;
     tel: number;

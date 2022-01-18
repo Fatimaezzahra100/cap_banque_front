@@ -31,7 +31,8 @@ export class NewUserComponent implements OnInit {
       firstName: ["", Validators.required],
       email: ["", Validators.required],
       address: ["", Validators.required],
-      tel: [1234567890, Validators.required],
+      tel: ["",Validators.required],
+      password: ["", Validators.required],
     });
   }
 
