@@ -16,13 +16,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onLoggedIn (){
-     console.log(this.user);
-     let isValidUser : Boolean = this.authService.signIn(this.user);
+  onLoggedIn (formValues:any){
+     
+     let isValidUser : Boolean = this.authService.signIn(formValues);
      if(isValidUser){
        this.router.navigateByUrl('/home');
      } else{
-        //alert('login ou mot de passe incorrect')
+        alert('Incorrect userName or password')
         this.erreur=1
      }
     }
