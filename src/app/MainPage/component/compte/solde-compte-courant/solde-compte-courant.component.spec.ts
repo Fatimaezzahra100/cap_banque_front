@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompteEditComponent } from './compte-edit.component';
+import { SoldeCompteCourantComponent } from './solde-compte-courant.component';
 
-describe('CompteEditComponent', () => {
-  let component: CompteEditComponent;
-  let fixture: ComponentFixture<CompteEditComponent>;
+describe('SoldeCompteCourantComponent', () => {
+  let component: SoldeCompteCourantComponent;
+  let fixture: ComponentFixture<SoldeCompteCourantComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CompteEditComponent ]
+      declarations: [ SoldeCompteCourantComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CompteEditComponent);
+    fixture = TestBed.createComponent(SoldeCompteCourantComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

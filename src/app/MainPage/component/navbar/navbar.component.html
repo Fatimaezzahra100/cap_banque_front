@@ -1,35 +1,52 @@
 <div class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">ngEvents</a>
+      <a class="navbar-brand">CapBanque</a>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
           <a
-            [routerLink]="['/events']"
+            [routerLink]="['/home']"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact:true}"
-            >All Events</a
+            >Home</a
           >
         </li>
         <li>
           <a
-            [routerLink]="['/events/new']"
+            [routerLink]="['']"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact:true}"
-            >Create Event</a
+            >Mon RIB</a
           >
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Events
+            Mes Comptes
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="">Angular Connect</a>
+              <a href="">Compte courant</a>
+            </li>
+            <li>
+              <a href="">Comptes Epargne</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Effectuer un virement
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="">Virement interne</a>
+            </li>
+            <li>
+              <a href="">Virement externe</a>
             </li>
           </ul>
         </li>
@@ -38,6 +55,30 @@
         <ul class="nav navbar-nav">
           <li>
            
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-header navbar-right">
+        <ul class="nav navbar-nav">
+          <li>
+            
+            <a
+              
+              [routerLink]="['']"
+              >Forum</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-header navbar-right">
+        <ul class="nav navbar-nav">
+          <li>
+            
+            <a
+              
+              [routerLink]="['']"
+              >Profile</a
+            >
           </li>
         </ul>
       </div>
@@ -52,7 +93,7 @@
             name="searchTerm"
             type="text"
             class="form-control"
-            placeholder="Search Sessions"
+            placeholder="search..."
           />
         </div>
         <button class="btn btn-default" modal-trigger="searchResults">
