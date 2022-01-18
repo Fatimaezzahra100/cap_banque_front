@@ -1,3 +1,5 @@
+import { AuthentificationService } from './authentification.service';
+import { UserService } from './user.service';
 import { Injectable, EventEmitter } from "@angular/core";
 import { Operation } from "./operation.model";
 import { Compte } from "./compte.model";
@@ -12,9 +14,11 @@ import { environment } from "src/environments/environment";
 export class OperationsService {
 
   private apiServerUrl = environment.apiBaseUrl;
-  private currentUserId = 1;    // recuperer le userId de authentication.service !
+     // recuperer le userId de authentication.service !
+    
+  private currentUserId? : number = this.authService.loggedUserId ;
 
-  constructor(private http:HttpClient){};
+  constructor(private http:HttpClient, private authService :AuthentificationService){};
 
   getOperations(): Observable<Operation[]> {
    return this.http.get<Operation[]>(`${this.apiServerUrl}/banking/users/${this.currentUserId}/ops`);

@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -8,7 +9,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './MainPage/component/home/home.component';
 import { NavbarComponent } from './MainPage/component/navbar/navbar.component';
 import { OperationsComponent } from './MainPage/component/operations/operations.component';
+import { LoginComponent } from './MainPage/component/login/login.component';
 import { SoldeCompteCourantComponent } from './MainPage/component/compte/solde-compte-courant/solde-compte-courant.component';
+import { NewUserComponent } from './MainPage/component/new-user/new-user.component';
+import { CommonModule } from '@angular/common';
+import { TermsComponent } from './MainPage/component/terms/terms.component';
 
 
 @NgModule({
@@ -17,7 +22,10 @@ import { SoldeCompteCourantComponent } from './MainPage/component/compte/solde-c
     HomeComponent,
     NavbarComponent,
     OperationsComponent,
-    SoldeCompteCourantComponent
+    SoldeCompteCourantComponent,
+    LoginComponent,
+    NewUserComponent,
+    TermsComponent
    
   ],
   imports: [
@@ -25,7 +33,8 @@ import { SoldeCompteCourantComponent } from './MainPage/component/compte/solde-c
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
