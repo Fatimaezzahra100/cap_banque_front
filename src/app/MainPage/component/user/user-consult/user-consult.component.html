@@ -1,0 +1,29 @@
+
+<ng-container *ngIf="(users$ | async) as result" [ngSwitch]="result.dataState">
+    <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+        Loading .....
+    </ng-container>
+    <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+        <div class="alert-danger">
+            {{result.errorMessage}}
+        </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+    <div class="container" *ngIf="users$">
+        <table>
+            <tr>
+                <th>Pseudo du client</th><th>Nom du client</th><th>prénom du client</th><th>Email </th><th>Telephone </th><th>Adresse </th>
+            </tr>
+            <tr *ngFor="let p of result.data">
+                <td>{{p.userName}}</td>
+                <td>{{p.lastName}}</td>
+                <td>{{p.firstName}}</td>
+                
+                <td>{{p.email}}</td>
+                <td>{{p.tel}}</td>
+                <td>{{p.address}}</td>
+            </tr>
+        </table>
+    </div>
+    </ng-container>
+</ng-container>

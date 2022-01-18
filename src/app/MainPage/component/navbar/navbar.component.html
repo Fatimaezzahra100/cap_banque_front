@@ -1,26 +1,15 @@
 <div class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">ngEvents</a>
+      <a class="navbar-brand">Espace Client</a>
     </div>
-
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a
-            [routerLink]="['/events']"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact:true}"
-            >All Events</a
-          >
+          <a>Devenir Client chez CapBanque</a>
         </li>
         <li>
-          <a
-            [routerLink]="['/events/new']"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact:true}"
-            >Create Event</a
-          >
+          <a>Create Event</a>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -34,25 +23,13 @@
           </ul>
         </li>
       </ul>
-      <div class="navbar-header navbar-right">
-        <ul class="nav navbar-nav">
-          <li>
-           
-          </li>
-        </ul>
-      </div>
-      <form
-        id="searchForm"
-        class="navbar-form navbar-right"
-      >
+      <form id="searchForm" class="navbar-form navbar-right" >
         <div class="form-group">
           <input
-          
             name="searchTerm"
             type="text"
             class="form-control"
-            placeholder="Search Sessions"
-          />
+            placeholder="Search Sessions"/>
         </div>
         <button class="btn btn-default" modal-trigger="searchResults">
           Search
@@ -60,4 +37,17 @@
       </form>
     </div>
   </div>
+  <div>
+    
+     <nav class="nav navbar-expand-sm bg-light navbar-light">
+      <ul class="navbar navbar-nav">
+          <li>
+              <button (click)="onGetAllComptesNav()" class="btn btn-sm btn-outline-info ml-2"> ------</button>
+          </li>
+      </ul>
+    </nav>
+   
+  </div>
 </div>
+
+

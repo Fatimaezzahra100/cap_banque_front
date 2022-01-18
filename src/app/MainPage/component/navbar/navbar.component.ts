@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CompteActionsTypes } from '../../state/compte.state';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  @Output() compteEventEmitter : EventEmitter<any> = new EventEmitter();
+
+  constructor( ) { }
 
   ngOnInit(): void {
+  }
+
+  onGetAllComptesNav(){
+    this.compteEventEmitter.emit(CompteActionsTypes.GET_ALL_COMPTES);
   }
 
 }

@@ -1,1 +1,30 @@
 <p>compte-consult works!</p>
+
+<app-navbar (compteEventEmitter)="onActionEvent($event)"></app-navbar>
+<ng-container *ngIf="(comptes$ | async) as result" [ngSwitch]="result.dataState">
+    <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+        Loading .....
+    </ng-container>
+    <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+        <div class="alert-danger">
+            {{result.errorMessage}}
+        </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+        <div class="container" *ngIf="comptes$">
+            <table class="table">
+                <tr>
+                    <th>Identifiant</th><th>User</th><th>account Number</th><th>balance</th><th>creationDate</th><th>overdraft</th>
+                </tr>
+                <tr *ngFor="let compte of result.data">
+                    <td>{{compte.compteId}}</td>
+                    <td>{{compte.user}}</td>
+                    <td>{{compte.accountNumber}}</td>
+                    <td>{{compte.balance}}</td>
+                    <td>{{compte.creationDate}}</td>
+                    <td>{{compte.overdraft}}</td>
+                </tr>
+            </table>
+        </div>  
+    </ng-container>
+</ng-container>
