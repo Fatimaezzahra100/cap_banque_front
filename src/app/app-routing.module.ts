@@ -5,6 +5,8 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OperationsComponent } from './MainPage/component/operations/operations.component';
 import { HomeComponent } from './MainPage/component/home/home.component';
+import { ProfileComponent } from './MainPage/component/profile/profile.component';
+import { RibConsultationComponent } from './MainPage/component/rib-consultation/rib-consultation.component';
 
 const routes: Routes = [
  
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path:"home",component: HomeComponent},
   {path:"", component: LoginComponent},
   {path:"newUser", component: NewUserComponent},
-  {path:"terms", component:TermsComponent}
+  {path:"terms", component:TermsComponent},
+  {path:"profile", component:ProfileComponent},
+  {path:"rib", component:RibConsultationComponent}
   
 ];
 

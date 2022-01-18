@@ -18,6 +18,7 @@ export class NewUserComponent implements OnInit {
     email: new FormControl(''),
     address: new FormControl(''),
     tel: new FormControl(''),
+    password: new FormControl(''),
   });
 
   submitted:boolean=false;
@@ -59,6 +60,7 @@ export class NewUserComponent implements OnInit {
     if(this.userFormGroup?.invalid)return;
     this.userService.saveUser(this.userFormGroup?.value).subscribe(data=>{
       alert("Success Saving user")
+      this.router.navigateByUrl('');
     });
   }
 

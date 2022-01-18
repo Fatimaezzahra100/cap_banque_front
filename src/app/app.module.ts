@@ -14,6 +14,8 @@ import { SoldeCompteCourantComponent } from './MainPage/component/compte/solde-c
 import { NewUserComponent } from './MainPage/component/new-user/new-user.component';
 import { CommonModule } from '@angular/common';
 import { TermsComponent } from './MainPage/component/terms/terms.component';
+import { ProfileComponent } from './MainPage/component/profile/profile.component';
+import { RibConsultationComponent } from './MainPage/component/rib-consultation/rib-consultation.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { TermsComponent } from './MainPage/component/terms/terms.component';
     SoldeCompteCourantComponent,
     LoginComponent,
     NewUserComponent,
-    TermsComponent
+    TermsComponent,
+    ProfileComponent,
+    RibConsultationComponent
    
   ],
   imports: [
