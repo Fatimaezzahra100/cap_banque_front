@@ -10,5 +10,8 @@ export interface Operation {
     frequence: Frequence;
     ribReceiver?: Rib,
     compteReceiverId?: number;
+    userSender: String;
+    userReceiver: String;
+    
     
 }

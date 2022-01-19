@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Operation } from '../../service/operation.model';
 import { OperationsService } from '../../service/operations.service';
+import { User } from '../../service/user.model';
 
 @Component({
   selector: 'app-operations',
@@ -13,14 +14,12 @@ export class OperationsComponent implements OnInit {
    searchTerm: string = "";
    foundOperations!: Operation[];
   
-  constructor(private operationService: OperationsService) {}
+  constructor(public operationService: OperationsService) {}
 
   //the ngOnInit method is called when the component is loaded
   ngOnInit() {
     this.loadEvents();
   }
-
-  
 
   loadEvents(){
     this.operationService.getOperations().subscribe(
@@ -35,4 +34,6 @@ export class OperationsComponent implements OnInit {
       console.log(this.foundOperations);
     });
   }
+
+ 
 }
