@@ -1,12 +1,13 @@
 *{
     text-decoration: none;
-    color:black;
     margin:20px;
 }
-
+a{
+    color:white;
+}
 a:hover{
     text-decoration: none;
-    animation: changeeColor 0.4s linear both ;
+    animation: changeeColor 0.2s  linear both ;
 
 
 }
@@ -14,7 +15,7 @@ a:hover{
     
 @keyframes changeeColor {
     0%{
-        color:black;
+        color:white;
     }
     100%{
         color:blue;

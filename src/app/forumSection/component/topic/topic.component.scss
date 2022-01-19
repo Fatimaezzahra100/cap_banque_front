@@ -1,6 +1,6 @@
-* {
+a {
     text-decoration: none;
-    color:black;
+    color:white;
     font-size:12px;
 }
 
@@ -20,14 +20,14 @@
             font-size: 15px;
             &:hover{
                 text-decoration: none;
-                animation: changeColor 0.4s linear both ;
+                animation: changeColor 0.2s linear both ;
                 @keyframes changeColor {
                     0%{
-                        color:black;
+                        color:white;
                         text-decoration: none;
                     }
                     100%{
-                        color:rgb(64, 196, 232);
+                        color:blue;
                         text-decoration: none;
                     }
                 

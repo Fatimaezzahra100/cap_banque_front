@@ -7,7 +7,7 @@ import { Topic } from '../topic/topic';
 @Component({
   selector: 'app-topic-detail',
   templateUrl: './topic-detail.component.html',
-  styleUrls: ['./topic-detail.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./topic-detail.component.css']
 })
 export class TopicDetailComponent implements OnInit {
   topic!: Topic;

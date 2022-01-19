@@ -5,7 +5,7 @@
 }
 
 .answer__form{
-    border-top:3px solid rgb(33, 33, 92);
+    border-top:3px solid rgb(255, 255, 255);
     padding-top: 20px;
 }
 .topic__name{
@@ -14,10 +14,10 @@
 }
 .response__number{
     font-size:20px;
-    color:rgb(33, 33, 92);
+    color:rgb(255, 255, 255);
 }
 
 .answer{
-    border-bottom:1px dashed gray;
+    border-bottom:1px dashed rgb(200, 198, 198);
     padding:20px;
 }

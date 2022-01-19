@@ -7,7 +7,7 @@ import { Topic } from '../topic/topic';
 @Component({
   selector: 'app-category-detail',
   templateUrl: './category-detail.component.html',
-  styleUrls: ['./category-detail.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./category-detail.component.css']
 })
 export class CategoryDetailComponent implements OnInit {
   category!: Category

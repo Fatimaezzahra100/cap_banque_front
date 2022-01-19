@@ -4,7 +4,7 @@ import { Category } from './category';
 @Component({
   selector: 'category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./category.component.css']
 })
 export class CategoryComponent implements OnInit {
   @Input() category!: Category

@@ -4,7 +4,7 @@ import { Topic } from '../topic/topic';
 @Component({
   selector: 'topic-list',
   templateUrl: './topic-list.component.html',
-  styleUrls: ['./topic-list.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./topic-list.component.css']
 })
 export class TopicListComponent implements OnInit {
   topics: Topic[] = [];

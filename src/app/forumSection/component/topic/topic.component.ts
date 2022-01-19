@@ -3,7 +3,7 @@ import { Topic } from './topic';
 @Component({
   selector: 'topic',
   templateUrl: './topic.component.html',
-  styleUrls: ['./topic.component.scss']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./topic.component.scss']
 })
 export class TopicComponent implements OnInit {
   @Input() topic!:Topic;

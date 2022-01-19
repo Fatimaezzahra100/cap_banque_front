@@ -5,7 +5,7 @@ import { userList } from '../../service/user-provider';
 @Component({
   selector: 'comment-create',
   templateUrl: './comment-create.component.html',
-  styleUrls: ['./comment-create.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./comment-create.component.css']
 })
 export class CommentCreateComponent implements OnInit {
   @Input() topicId!:number;

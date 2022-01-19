@@ -4,7 +4,7 @@ import { Comment } from './comment';
 @Component({
   selector: 'comment',
   templateUrl: './comment.component.html',
-  styleUrls: ['./comment.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./comment.component.css']
 })
 export class CommentComponent implements OnInit {
   @Input() comment!:Comment;
