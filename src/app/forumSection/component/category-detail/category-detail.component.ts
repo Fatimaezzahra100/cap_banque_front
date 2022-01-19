@@ -7,28 +7,30 @@ import { Topic } from '../topic/topic';
 @Component({
   selector: 'app-category-detail',
   templateUrl: './category-detail.component.html',
-  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./category-detail.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css', './category-detail.component.css']
 })
 export class CategoryDetailComponent implements OnInit {
-  category!: Category
-  
+  category!: Category;
+
   //A supprimer quand t'as fais le lien avec l'api
   topics: Topic[] = [];
-  
-  
-  constructor(private route: ActivatedRoute, private categoryService: CategoryService,
-    
-    //A supprimer quand t'as fais le lien avec l'api
-    private topicService: TopicService) { }
+
+
+  constructor(private route: ActivatedRoute, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    
-    //A supprimer quand t'as fais le lien avec l'api
-    this.topicService.getByCategory(id).subscribe(topics => this.topics = topics);
-    
-    
-    this.categoryService.getCategory(id).subscribe(category => this.category = category);
+
+    this.categoryService.getCategory(id).subscribe(category => {
+      console.log(category);
+      this.category = category;
+    }
+    );
+
   }
 
+  getLastMessageData(comments: any): any {
+    console.log(comments[0]);
+    // this.lastMessageData = ["author" : categories[categories.length].date];
+  }
 }

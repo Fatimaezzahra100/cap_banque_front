@@ -7,7 +7,7 @@ export interface Topic {
     content: string;
     created_at: Date;
     updated_at: Date;
-    user_id: {
+    user: {
         username:string
     };
     category: Category;
