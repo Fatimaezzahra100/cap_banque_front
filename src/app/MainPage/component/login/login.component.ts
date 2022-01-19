@@ -17,13 +17,16 @@ export class LoginComponent implements OnInit {
   }
 
   onLoggedIn (formValues:any){
-     
-     let isValidUser : Boolean = this.authService.signIn(formValues);
-     if(isValidUser){
-       this.router.navigateByUrl('/home');
-     } else{
-        alert('Incorrect userName or password')
-        this.erreur=1
-     }
-    }
+    
+    this.authService.signIn(formValues).then(result => {
+
+      if(result){
+        this.router.navigateByUrl('/home');
+      } else{
+         alert('Incorrect userName or password')
+         this.erreur=1
+      }
+    });
+    
+   }
 }
