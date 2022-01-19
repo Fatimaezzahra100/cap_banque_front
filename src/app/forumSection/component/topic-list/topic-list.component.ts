@@ -14,7 +14,6 @@ export class TopicListComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true;
     this.topicService.getTopics().subscribe(topics => {
-      console.log(topics);
       this.topics = topics;
       this.loading = false;
     });

@@ -36,14 +36,13 @@ a {
         }
        .topic__category__name{
         position: absolute;
-        right:0px;
-        top:0px;
-        border-radius: 10px;
-        border:2px solid rgb(130, 130, 207);
-        background-color: rgb(145, 145, 219);
+        right:-8px;
+        top:-8px;
+        border:2px solid rgb(235, 131, 83);
+        background-color: rgb(235, 131, 83);
         font-weight: bold;
         color:white;
-        padding:10px;
+        padding:5px;
         width:100px;
         text-align: center;
         }

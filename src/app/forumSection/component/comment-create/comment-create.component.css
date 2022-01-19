@@ -3,3 +3,16 @@ textarea{
     max-height: 150px;
     min-height: 60px;
 }
+
+.create__comment__button{
+    padding:10px 20px;
+    background-color: #ec31c4;
+    color:white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.create__comment__button:hover{
+    color:white;
+    background-color: #bd269c;
+}

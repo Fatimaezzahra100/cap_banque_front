@@ -8,6 +8,9 @@
 <div class="comment__content">
     {{comment.content}}
 </div>
-<div class="comment__footer d-flex justify-content-end p-1">
-    <p class="mb-0"><i class="bi bi-chat"></i></p>
+<div class="comment__footer d-flex justify-content-end">
+    <p (click)="showSubComments()" class="mb-0"><i class="h2 bi bi-chat"></i></p>
+</div>  
+<div *ngIf="displayingSubComments">
+    <sub-comment *ngFor="let subcomment of comment.subcomments" [subcomment]="subcomment"></sub-comment>
 </div>

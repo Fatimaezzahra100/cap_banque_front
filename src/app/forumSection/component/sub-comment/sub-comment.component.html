@@ -1,1 +1,11 @@
-<p>sub-comment works!</p>
+<div class="subComment">
+    <div class="subComment__header">
+        <p class="header__name">{{subcomment.user.username}}</p>
+    </div>
+    <div class="subComment__content">
+        <p class="content">{{subcomment.content}}</p>
+    </div>
+    <div class="subComment__footer">
+        <p>{{subcomment.created_at}}</p>
+    </div>
+</div>

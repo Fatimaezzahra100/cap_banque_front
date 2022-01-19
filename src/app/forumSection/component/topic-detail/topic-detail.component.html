@@ -1,6 +1,6 @@
-<div class="container mt-4">
+<div class="container mt-4 mb-4">
     <div>
-        <a (click)="goBack()">Retour à la liste des sujets</a>
+        <p class="back__button" (click)="goBack()">Retour à la liste des sujets</p>
     </div>
     <div class="row mt-4 mb-5">
         <div class="col-12">
@@ -26,8 +26,8 @@
     <div class="row answers">
         <comment *ngFor="let comment of topic.comments" class="answer col-12" [comment]="comment"></comment>
     </div>
-    <div class="mt-2">
-        <a (click)="goBack()">Retour à la liste des sujets</a>
+    <div class="my-4">
+        <p class="back__button" (click)="goBack()">Retour à la liste des sujets</p>
     </div>
     <comment-create [topicId]="topic.id"></comment-create>
 </div>

@@ -1,3 +1,9 @@
 .comment__footer{
-    background-color: #CDCDCD;
+    padding:15px 0px;
+    border-top:1px solid white;
+    margin-top:50px;
+}
+.comment__footer p:hover{
+    color:blue;
+    cursor: pointer;
 }

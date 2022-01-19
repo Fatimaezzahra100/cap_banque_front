@@ -6,5 +6,5 @@ export interface Comment {
     created_at:Date;
     updated_at:Date;
     user:User;
-    subComment?:SubComment[];
+    subcomments?:SubComment[];
 }

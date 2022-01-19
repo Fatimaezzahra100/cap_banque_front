@@ -11,6 +11,7 @@
 .topic__name{
     color:rgb(226, 43, 104);
     font-weight: bold;
+    font-size:25px;
 }
 .response__number{
     font-size:20px;
@@ -19,5 +20,13 @@
 
 .answer{
     border-bottom:1px dashed rgb(200, 198, 198);
-    padding:20px;
+    padding:20px 0px;
+}
+
+.back__button{
+    cursor:pointer;
+}
+.back__button:hover{
+    font-weight: bold;
+    color:rgb(226, 43, 104);
 }

@@ -1,0 +1,12 @@
+.subComment{
+    background-color: #212f3d;
+    padding:10px;
+    border-radius:5px;
+    margin-bottom:10px;
+}
+
+.subComment .subComment__footer{
+    border-top:1px dashed white;
+    margin-top:35px;
+    padding-top:10px;
+}
