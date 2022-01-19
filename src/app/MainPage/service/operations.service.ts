@@ -14,8 +14,6 @@ import { environment } from "src/environments/environment";
 export class OperationsService {
 
   private apiServerUrl = environment.apiBaseUrl;
-     // recuperer le userId de authentication.service !
-    
   private currentUserId? : number = this.authService.loggedUserId ;
 
   constructor(private http:HttpClient, private authService :AuthentificationService){};
