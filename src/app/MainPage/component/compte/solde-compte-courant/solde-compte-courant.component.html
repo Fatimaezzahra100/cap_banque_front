@@ -1,5 +1,6 @@
 <div class="text-black bg-light p-2 rounded-pill" style="text-align: center; width: 500px; margin-bottom: 50px;">
 <h1 style="margin-top: 20px; color: black;">Current account balance: </h1>
 <hr />
-<h1 style="margin-bottom: 20px; color:black">{{compte.balance | currency:'EUR'}}</h1>
+<h1 *ngIf="compte.overdraft == 0" style="margin-bottom: 20px; color:black">{{compte.balance | currency:'EUR'}}</h1>
+<h1 *ngIf="compte.overdraft  > 0"style="margin-bottom: 20px; color: red">- {{compte.overdraft | currency:'EUR'}}</h1>
 </div>

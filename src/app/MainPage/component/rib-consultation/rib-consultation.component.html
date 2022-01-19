@@ -1,2 +1,14 @@
 <app-navbar></app-navbar>
-<p>rib-consultation works!</p>
+<div style="margin-left: 40px; margin-top: 40px;">
+<h1>Your RIB : </h1>
+<p style="font-style: italic;">Other users need all the aboves informations to make a transfer to you </p>
+
+<div class="well hoverwell thumbnail">
+    <div> RIB ID: {{rib.ribId}}</div>
+    <div> User ID: {{rib.userId}}</div>
+    <div> BIC: {{rib.bic}}</div>
+    <div> IBAN: {{rib.iban}}</div>
+</div>
+<button type="button" class="btn btn-primary">Download rib</button>
+</div>
+
