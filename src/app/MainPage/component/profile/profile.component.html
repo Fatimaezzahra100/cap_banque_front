@@ -1,2 +1,36 @@
 <app-navbar></app-navbar>
-<p>profile works!</p>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Your personal informations</div>
+        <div class="panel-body">
+            <div>
+                <label>first name : </label>
+                <label>{{user?.firstName}}</label>
+            </div>
+            <div>
+                <label>Last name : </label>
+                <label>{{user?.lastName}}</label>
+            </div>
+            <div>
+                <label>User name : </label>
+                <label>{{user?.userName}}</label>
+            </div>
+            <div>
+                <label>Address : </label>
+                <label> {{user?.address}}</label>
+            </div>
+            <div>
+                <label>phone number : </label>
+                <label> {{user?.tel}}</label>
+            </div>
+            <div>
+                <label>Email : </label>
+                <label>{{user?.email}}</label>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <button (click)="onEditUser()" class="btn btn-sm btn-danger">
+            <span >Edit your profil</span>
+        </button>
+ </div>

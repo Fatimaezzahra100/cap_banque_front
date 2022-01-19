@@ -1,3 +1,4 @@
+import { EditUserComponent } from './MainPage/component/edit-user/edit-user.component';
 import { TermsComponent } from './MainPage/component/terms/terms.component';
 import { NewUserComponent } from './MainPage/component/new-user/new-user.component';
 import { LoginComponent } from './MainPage/component/login/login.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:"newUser", component: NewUserComponent},
   {path:"terms", component:TermsComponent},
   {path:"profile", component:ProfileComponent},
-  {path:"rib", component:RibConsultationComponent}
+  {path:"rib", component:RibConsultationComponent},
+  {path:"Edit", component:EditUserComponent}
   
 ];
 

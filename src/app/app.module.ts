@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { TermsComponent } from './MainPage/component/terms/terms.component';
 import { ProfileComponent } from './MainPage/component/profile/profile.component';
 import { RibConsultationComponent } from './MainPage/component/rib-consultation/rib-consultation.component';
+import { EditUserComponent } from './MainPage/component/edit-user/edit-user.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RibConsultationComponent } from './MainPage/component/rib-consultation/
     NewUserComponent,
     TermsComponent,
     ProfileComponent,
-    RibConsultationComponent
+    RibConsultationComponent,
+    EditUserComponent
    
   ],
   imports: [
