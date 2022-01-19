@@ -15,7 +15,7 @@ export class AuthentificationService {
   loggedUserId?: number;
   isLoggedIn : Boolean = false;
 
-  
+
   recuperer() {
     return new Promise<void>((resolve, reject) => {
       this.userService.getUsers().subscribe(Response => {
@@ -45,31 +45,7 @@ export class AuthentificationService {
     
   }
  
- /*
-  signIn (user :User) : Boolean {
-    var validUser: Boolean = false;
-
-    this.userService.getUsers().subscribe(response => {
-      response.forEach((curUser) => {
-        if(user.userName=== curUser.userName && user.password === curUser.password){
-          validUser = true;
-          console.log(validUser);
-          this.loggedUser = curUser.userName;
-          this.loggedUserId= curUser.userId;
-          this.isLoggedIn=true;
-          localStorage.setItem('loggedUser', String(this.loggedUser));
-          localStorage.setItem('isLoggedIn', String(this.isLoggedIn));
-          localStorage.setItem('userId', String(this.loggedUserId));
-        } else {validUser = false}
-      }) 
-      
-    });
-    
-    console.log(validUser);
-    return validUser;
-    
-      
-  }*/
+ 
 
   signUp (){
   }
