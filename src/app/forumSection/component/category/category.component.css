@@ -18,7 +18,8 @@ a:hover{
         color:white;
     }
     100%{
-        color:blue;
+        color:rgb(226, 43, 104);
+        font-weight: bold;
     }
 
 }

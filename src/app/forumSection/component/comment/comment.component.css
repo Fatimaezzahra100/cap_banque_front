@@ -4,6 +4,6 @@
     margin-top:50px;
 }
 .comment__footer p:hover{
-    color:blue;
+    color:rgb(226, 43, 104);
     cursor: pointer;
 }
