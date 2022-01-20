@@ -1,12 +1,12 @@
 import { AuthentificationService } from './authentification.service';
-import { UserService } from './user.service';
+import { User } from './user.model';
 import { Injectable, EventEmitter } from "@angular/core";
 import { Operation } from "./operation.model";
-import { Compte } from "./compte.model";
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { environment } from "src/environments/environment";
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,6 @@ import { environment } from "src/environments/environment";
 export class OperationsService {
 
   private apiServerUrl = environment.apiBaseUrl;
-     // recuperer le userId de authentication.service !
-    
   private currentUserId? : number = this.authService.loggedUserId ;
 
   constructor(private http:HttpClient, private authService :AuthentificationService){};
@@ -25,7 +23,7 @@ export class OperationsService {
     
   }
 
-
+  
   searchOperations(searchTerm: string) {
     var term = searchTerm.toLocaleLowerCase();
     var results: Operation[] = [];
