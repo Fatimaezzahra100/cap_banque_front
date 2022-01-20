@@ -67,7 +67,7 @@ export class EditUserComponent implements OnInit {
     if(this.userFormGroup?.invalid)return;
     this.profileService.editUser(this.userFormGroup?.value).subscribe(data=>{
       alert("Success Saving user")
-      this.router.navigateByUrl('');
+      this.router.navigateByUrl('/profile');
     });
   }
 
