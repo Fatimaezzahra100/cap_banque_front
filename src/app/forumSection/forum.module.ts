@@ -20,6 +20,7 @@ import { CommentService } from './service/comment.service';
 import { SubCommentService } from './service/sub-comment.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UtilsService } from './service/utils';
+import { SubcommentCreateComponent } from './component/subcomment-create/subcomment-create.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'categories/:id', component: CategoryDetailComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
     CommentComponent,
     SubCommentComponent,
     CommentCreateComponent,
+    SubcommentCreateComponent,
   ],
   imports: [
     CommonModule,

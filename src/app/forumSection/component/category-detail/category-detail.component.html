@@ -25,10 +25,10 @@
                 <p class="text-center">MESSAGES</p>
             </div>
         </div>
-        <div class="row" *ngFor="let topic of category.topic">
+        <div class="row mb-3" *ngFor="let topic of category.topic">
             <div class="col-6">
-                <a routerLink="/forum/topics/{{topic.id }}">{{topic.title}}</a>
-                <div class="d-flex">
+                <a class="" routerLink="/forum/topics/{{topic.id }}">{{topic.title}}</a>
+                <div class="d-flex mt-4">
                     <p>Par {{topic.user.username}}</p>
                     <p class="mb-0 ml-1">point</p>
                     <p class="mb-0 ml-1">{{formatDate(topic.created_at.toString())}} {{formatHour(topic.created_at.toString())}}</p>

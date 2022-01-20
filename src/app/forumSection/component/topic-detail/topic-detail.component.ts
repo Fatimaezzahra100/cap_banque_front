@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { TopicService } from '../../service/topic.service';
@@ -11,8 +11,8 @@ import { UtilsService } from '../../service/utils';
   styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css', './topic-detail.component.css']
 })
 export class TopicDetailComponent implements OnInit {
-  topic!: Topic;
-  constructor(private router: ActivatedRoute, private topicService: TopicService, private location: Location, public utilsService:UtilsService) { }
+  @Output() topic!: Topic;
+  constructor(private router: ActivatedRoute, private topicService: TopicService, private location: Location, public utilsService: UtilsService) { }
 
   ngOnInit(): void {
     const id = Number(this.router.snapshot.paramMap.get('id'));
@@ -31,5 +31,9 @@ export class TopicDetailComponent implements OnInit {
 
   formatHour(date: string) {
     return this.utilsService.formatHour(date);
+  }
+
+  addComment(event: any) {
+    this.topic.comments.push(event);
   }
 }

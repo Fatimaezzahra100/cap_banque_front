@@ -1,0 +1,23 @@
+.subcomment__form{
+    background-color:#212f3d;
+    margin-bottom: 25px;
+}
+
+textarea{
+    width:100%;
+    max-height: 90px;
+    min-height: 30px;
+}
+
+.create__comment__button{
+    padding:10px 20px;
+    background-color: #ec31c4;
+    color:white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.create__comment__button:hover{
+    color:white;
+    background-color: #bd269c;
+}

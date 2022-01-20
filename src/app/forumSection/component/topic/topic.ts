@@ -11,7 +11,7 @@ export interface Topic {
         username:string
     };
     category: Category;
-    comments?: Comment[];
+    comments: Comment[];
 }
 
 

@@ -14,5 +14,11 @@
     <p (click)="showSubComments()" class="mb-0"><i class="h2 bi bi-chat"></i></p>
 </div>  
 <div *ngIf="displayingSubComments">
+    <div class="container">
+        <sub-comment-create [commentId]="comment.id"></sub-comment-create>
+    </div>
     <sub-comment *ngFor="let subcomment of comment.subcomments" [subcomment]="subcomment"></sub-comment>
+    <div class="container">
+        <sub-comment-create [commentId]="comment.id"></sub-comment-create>
+    </div>
 </div>

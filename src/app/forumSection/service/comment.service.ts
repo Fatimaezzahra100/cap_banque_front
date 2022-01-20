@@ -1,4 +1,4 @@
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Comment } from '../component/comment/comment';
@@ -8,19 +8,15 @@ import { TopicService } from './topic.service';
   providedIn: 'root'
 })
 export class CommentService {
-  private apiurl: string = "http://localhost:8080/api/comments/";
+  private apiurl: string = "http://localhost:8080/api/comments";
   topic!: Topic;
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
   constructor(private topicService: TopicService, private http: HttpClient) { }
 
-  addComment(topicId: number, comment: Comment): Observable<Comment> {
+  addComment(comment: any): Observable<Comment> {
 
-    this.topicService.getTopic(Number(topicId)).subscribe(topicElement => this.topic = topicElement);
-    if (this.topic !== undefined) {
-      this.topic.comments?.push(comment);
-
-    } else {
-      return of();
-    }
-    return of(comment);
+    return this.http.post<any>(this.apiurl,comment,this.httpOptions)
   }
 }
