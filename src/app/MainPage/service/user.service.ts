@@ -1,3 +1,5 @@
+import { OperationsService } from './operations.service';
+import { AuthentificationService } from './authentification.service';
 import { environment } from './../../../environments/environment';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -11,15 +13,17 @@ export class UserService {
 
   private apiServerUrl = environment.apiBaseUrl;
      
-  constructor(private http : HttpClient ) { }
+  constructor(private http : HttpClient) { }
 
   saveUser(user: User):Observable<User>{
     return this.http.post<User>(`${this.apiServerUrl}/banking/users/save`, user);
   }
-
+  
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.apiServerUrl}/banking/users/all`); 
    }
+
+
 
 
 }
