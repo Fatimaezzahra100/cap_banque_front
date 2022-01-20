@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { TopicService } from '../../service/topic.service';
 import { Topic } from '../topic/topic';
+import { UtilsService } from '../../service/utils';
 
 @Component({
   selector: 'app-topic-detail',
@@ -11,17 +12,24 @@ import { Topic } from '../topic/topic';
 })
 export class TopicDetailComponent implements OnInit {
   topic!: Topic;
-  constructor(private router: ActivatedRoute, private topicService: TopicService, private location: Location) { }
+  constructor(private router: ActivatedRoute, private topicService: TopicService, private location: Location, public utilsService:UtilsService) { }
 
   ngOnInit(): void {
     const id = Number(this.router.snapshot.paramMap.get('id'));
     this.topicService.getTopic(id).subscribe(topic => {
-      console.log(topic);
       this.topic = topic;
     });
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  formatDate(date: string) {
+    return this.utilsService.formatDate(date);
+  }
+
+  formatHour(date: string) {
+    return this.utilsService.formatHour(date);
   }
 }

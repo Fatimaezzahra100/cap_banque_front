@@ -6,6 +6,10 @@
         <p class="content">{{subcomment.content}}</p>
     </div>
     <div class="subComment__footer">
-        <p>{{subcomment.created_at}}</p>
+
+        <p>
+            {{formatDate(subcomment.created_at.toString())}} 
+            {{formatHour(subcomment.created_at.toString())}}
+        </p>
     </div>
 </div>

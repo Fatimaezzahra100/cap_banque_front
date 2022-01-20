@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UtilsService } from '../../service/utils';
 import { Comment } from './comment';
 
 @Component({
@@ -9,7 +10,7 @@ import { Comment } from './comment';
 export class CommentComponent implements OnInit {
   @Input() comment!: Comment;
   displayingSubComments: boolean = false;
-  constructor() { }
+  constructor(public utilsService:UtilsService) { }
 
   ngOnInit(): void {
   }
@@ -17,5 +18,12 @@ export class CommentComponent implements OnInit {
   showSubComments(): void {
     this.displayingSubComments = !this.displayingSubComments;
   }
+  
+  formatDate(date: string) {
+    return this.utilsService.formatDate(date);
+  }
 
+  formatHour(date: string) {
+    return this.utilsService.formatHour(date);
+  }
 }

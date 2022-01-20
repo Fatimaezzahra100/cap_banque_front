@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { CommentService } from './service/comment.service';
 import { SubCommentService } from './service/sub-comment.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UtilsService } from './service/utils';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'categories/:id', component: CategoryDetailComponent },
@@ -50,7 +51,8 @@ const routes: Routes = [
     TopicService,
     CategoryService,
     CommentService,
-    SubCommentService
+    SubCommentService,
+    UtilsService
   ]
 })
 export class ForumModule { }

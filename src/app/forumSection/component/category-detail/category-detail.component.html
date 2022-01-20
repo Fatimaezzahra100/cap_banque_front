@@ -31,12 +31,12 @@
                 <div class="d-flex">
                     <p>Par {{topic.user.username}}</p>
                     <p class="mb-0 ml-1">point</p>
-                    <p class="mb-0 ml-1">26 novembre 2021 17:27</p>
+                    <p class="mb-0 ml-1">{{formatDate(topic.created_at.toString())}} {{formatHour(topic.created_at.toString())}}</p>
                 </div>
             </div>
             <div class="col-3">
-                <p class="mb-0">26 novembre 2021 17:27</p>
-                <p class="mb-0">Par {{getLastMessageData(topic.comments)}}</p>
+                <p class="mb-0">{{getLastMessageData(topic.comments,"created_at")}}</p>
+                <p class="mb-0">Par {{getLastMessageData(topic.comments,"user")}}</p>
             </div>
             <div class="col-3">
                 <p class="text-center mb-0">{{topic.comments?.length}}</p>

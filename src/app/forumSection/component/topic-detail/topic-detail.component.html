@@ -9,8 +9,10 @@
                 <div class="topic__header">
                     <p class="mb-0">{{topic.user.username}}</p>
                     <div class="topic__header__date d-flex justify-content-start mb-4">
-                        <p class="mb-0">{{topic.created_at}}</p>
-                        <p class="ml-2 mb-0">16:45</p>
+                        <p class="mb-0">
+                            {{formatDate(topic.created_at.toString())}}
+                        </p>
+                        <p class="ml-2 mb-0">{{formatHour(topic.created_at.toString())}}</p>
                     </div>
                 </div>
                 <div class="topic__content">
