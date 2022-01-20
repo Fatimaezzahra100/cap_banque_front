@@ -26,7 +26,7 @@
     </div>
     <comment-create (commentEvent)="addComment($event)" [topicId]="topic.id"></comment-create>
     <div class="row answers">
-        <comment  *ngFor="let comment of topic.comments" class="answer col-12" [comment]="comment"></comment>
+        <comment *ngFor="let comment of topic.comments" class="answer col-12" [comment]="comment"></comment>
     </div>
     <div class="my-4">
         <p class="back__button" (click)="goBack()">Retour à la liste des sujets</p>

@@ -36,4 +36,5 @@ export class TopicDetailComponent implements OnInit {
   addComment(event: any) {
     this.topic.comments.push(event);
   }
+
 }

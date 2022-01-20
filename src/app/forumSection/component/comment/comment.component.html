@@ -15,7 +15,7 @@
 </div>  
 <div *ngIf="displayingSubComments">
     <div class="container">
-        <sub-comment-create [commentId]="comment.id"></sub-comment-create>
+        <sub-comment-create (subCommentEvent)="addSubComment($event)" [commentId]="comment.id"></sub-comment-create>
     </div>
     <sub-comment *ngFor="let subcomment of comment.subcomments" [subcomment]="subcomment"></sub-comment>
     <div class="container">

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UtilsService } from '../../service/utils';
 import { Comment } from './comment';
 
@@ -9,7 +9,7 @@ import { Comment } from './comment';
 })
 export class CommentComponent implements OnInit {
   @Input() comment!: Comment;
-
+  @Output() subCommentEvent = new EventEmitter;
   displayingSubComments: boolean = false;
   constructor(public utilsService: UtilsService) { }
 
@@ -27,4 +27,9 @@ export class CommentComponent implements OnInit {
   formatHour(date: string) {
     return this.utilsService.formatHour(date);
   }
+
+  addSubComment(event: any) {
+    this.comment.subcomments?.push(event);
+  }
+
 }
