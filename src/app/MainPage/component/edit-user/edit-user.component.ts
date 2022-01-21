@@ -27,13 +27,24 @@ export class EditUserComponent implements OnInit {
 
   constructor(private profileService: ProfileService,private fb:FormBuilder, private userService: UserService, private router: Router) { }
 
-  loadEvents(){
-    this.profileService.getUser().subscribe(
-      (response) => {this.user = response; console.log(response)}, 
-      (error)=> {alert(error.message)});
+  
+  async loadEvents(){
+    await this.recuperer();
   }
-  ngOnInit(): void {
-    this.loadEvents();
+
+  recuperer() {
+    return new Promise<void>((resolve, reject) => {
+      this.profileService.getUser().subscribe(
+        (response) => {this.user = response; resolve()}, 
+        (error)=> {alert(error.message)}
+        
+      );
+     
+    });
+  }
+  async ngOnInit(): Promise<void> {
+    await this.loadEvents();
+
     this.userFormGroup = this.fb.group({
       userName: [this.user.userName, Validators.required],
       lastName: [this.user.lastName, Validators.required],
@@ -41,7 +52,7 @@ export class EditUserComponent implements OnInit {
       email: [this.user.email, Validators.required],
       address: [this.user.address, Validators.required],
       tel: [this.user.tel,Validators.required],
-      password: [this.user.password, Validators.required],
+      password: ["", Validators.required],
     });
   }
 
