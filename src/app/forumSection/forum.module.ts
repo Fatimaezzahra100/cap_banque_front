@@ -5,7 +5,6 @@ import { ForumComponent } from './component/forum/forum.component';
 import { TopicListComponent } from './component/topic-list/topic-list.component';
 import { TopicComponent } from './component/topic/topic.component';
 import { TopicService } from './service/topic.service';
-import { ForumHeaderComponent } from './component/forum-header/forum-header.component';
 import { CategoryListComponent } from './component/category-list/category-list.component';
 import { CategoryComponent } from './component/category/category.component';
 import { CategoryService } from './service/category.service';
@@ -33,7 +32,6 @@ const routes: Routes = [
     ForumComponent,
     TopicListComponent,
     TopicComponent,
-    ForumHeaderComponent,
     CategoryListComponent,
     CategoryComponent,
     HomeComponent,

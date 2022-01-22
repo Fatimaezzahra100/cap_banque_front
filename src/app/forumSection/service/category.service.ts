@@ -45,7 +45,7 @@ export class CategoryService {
     return this.http.get<any>(this.apiurl).pipe<Category[]>(map(datas => datas['hydra:member']));
   }
 
-  getCategory(id: number): Observable<any> {
+  getCategory(id: number): Observable<Category> {
     return this.http.get<any>(this.apiurl + id);
   }
 }

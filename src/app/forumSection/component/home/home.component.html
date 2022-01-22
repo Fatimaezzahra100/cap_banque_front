@@ -1,6 +1,19 @@
 <div class="container">
     <h1 class="text-center">Forum CapBanque</h1>
-    <forum-header></forum-header>
+    <div class="container forum__header mb-5 mt-3">
+        <form #filterForm="ngForm" (ngSubmit)="topicList.filterTopic(filterForm.value)"
+            class="row d-flex justify-content-center">
+            <div class="col-12 d-flex row justify-content-center">
+                <div class="col-7">
+                    <h5>Rechercher un sujet </h5>
+                    <input type="text" (ngModel)="query" class="form-control header__query__input" name="query" id="query">
+                </div>
+                <div class="col-2 d-flex align-self-end">
+                    <button class="ml-2 btn btn-primary">Rechercher</button>
+                </div>
+            </div>
+        </form>
+    </div>
     <div class="container topic__list">
         <div class="row">
             <div class="col-3">
@@ -8,7 +21,7 @@
             </div>
             <div class="col-9">
                 <h3>Derniers messages</h3>
-                <topic-list></topic-list>
+                <topic-list #topicList [currentFilter]="query"></topic-list>
             </div>
         </div>
     </div>

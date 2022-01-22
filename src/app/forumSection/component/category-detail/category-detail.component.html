@@ -6,14 +6,15 @@
         <h3>Messages sur le forum {{category.name}}</h3>
     </div>
     <topic-create></topic-create>
-    <div class="header mt-1 row">
+    <form class="header mt-1 row" #categoryFilterForm="ngForm" (ngSubmit)="filterTopics(categoryFilterForm.value)"
+        action="">
         <div class="col-5 d-flex align-items-center">
-            <input type="text" name="search" id="search">
+            <input (ngModel)="query" type="text" name="query" id="query">
         </div>
         <div class="col-3">
             <button>Filtrer</button>
         </div>
-    </div>
+    </form>
     <div class="topics mt-2">
         <div class="row">
             <div class="col-6">
@@ -26,7 +27,7 @@
                 <p class="text-center">MESSAGES</p>
             </div>
         </div>
-        <div class="row mb-3" *ngFor="let topic of category.topic">
+        <div class="row mb-3" *ngFor="let topic of topics">
             <div class="col-6">
                 <a class="" routerLink="/forum/topics/{{topic.id }}">{{topic.title}}</a>
                 <div class="d-flex mt-4">
@@ -37,8 +38,9 @@
                 </div>
             </div>
             <div class="col-3">
-                <p  *ngIf="topic.comments.length > 0" class="mb-0">{{getLastMessageData(topic.comments,"created_at")}}</p>
-                <p  *ngIf="topic.comments.length > 0" class="mb-0">Par {{getLastMessageData(topic.comments,"user")}}</p>
+                <p *ngIf="topic.comments.length > 0" class="mb-0">{{getLastMessageData(topic.comments,"created_at")}}
+                </p>
+                <p *ngIf="topic.comments.length > 0" class="mb-0">Par {{getLastMessageData(topic.comments,"user")}}</p>
             </div>
             <div class="col-3">
                 <p class="text-center mb-0">{{topic.comments?.length}}</p>
