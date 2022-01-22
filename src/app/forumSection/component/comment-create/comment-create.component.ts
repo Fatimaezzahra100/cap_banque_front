@@ -26,7 +26,7 @@ export class CommentCreateComponent implements OnInit {
       user: "/api/users/" + userList[0].id
     }
     this.commentService.addComment(comment).subscribe(comment => {
-      this.content = '';
+      this.content = 'ffff';
       this.commentEvent.emit(comment);
     });
   }

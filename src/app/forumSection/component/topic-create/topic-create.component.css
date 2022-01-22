@@ -1,0 +1,39 @@
+.button__show__topic__form{
+    padding:10px 20px;
+    background-color: #ec31c4;
+    color:white;
+    border-radius: 5px;
+    font-weight: bold;
+    border:2px solid #ec31c4;   
+}
+
+.create__topic__section{
+    border:1px solid white;
+    padding:20px;
+}
+
+.form__title{
+    width:100%;
+    max-height: 90px;
+    min-height: 30px;
+    color:black;
+}
+
+.form__content{
+    width:100%;
+    max-height: 90px;
+    min-height: 30px;
+    color:black;
+}
+.button__form__cancel {
+    cursor: pointer;
+    vertical-align: bottom;
+}
+.button__form__post{
+    padding:10px 20px;
+    background-color: #ec31c4;
+    color:white;
+    border-radius: 5px;
+    font-weight: bold;
+    border:2px solid #ec31c4;   
+}

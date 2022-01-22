@@ -1,8 +1,9 @@
 <div class="subcomment__form p-4">
     <form #subCommentForm="ngForm" (ngSubmit)="addSubComment(commentId,subCommentForm.value)" action="#" class="row">
         <div class="col-12">
-            <textarea [ngModel]="content" name="content" id="content"></textarea>
+            <textarea (ngModel)="content" required minlength="4" #content="ngModel"name="content" id="content"></textarea>
         </div>
+
         <div class="mt-2 col-12 d-flex justify-content-end">
             <button class="btn create__comment__button btn-lg">Poster</button>
         </div>

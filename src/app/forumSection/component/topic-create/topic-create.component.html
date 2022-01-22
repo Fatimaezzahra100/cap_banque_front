@@ -1,0 +1,34 @@
+<div class="create__topic__section my-4">
+    <div class="row" *ngIf="!showTopicForm">
+        <div class="col-8">
+            <p class="mb-0">Une question ? Un conseil ?</p>
+            <p class="mb-0">Créer un nouveau sujet afin d'obtenir des réponses de la part de nos membres du forum</p>
+        </div>
+        <div class="col-4">
+            <button (click)="toggleTopicForm()" class="button__show__topic__form">Créer un nouveau sujet </button>
+        </div>
+    </div>
+    <div class="topic__create__form" *ngIf="showTopicForm">
+        <h2>Nouveau sujet dans le forum {{category.name}}</h2>
+        <div>
+            <p class="mb-0">Avertissement de modération</p>
+    
+            <p class="mb-0"></p>
+    
+            <form #topicForm="ngForm" (ngSubmit)="postTopic(topicForm.value)" action="#" class="row" method="post">
+                <div class="col-12 mt-3">
+                    <label for="title">Titre</label>
+                    <textarea class="form__title" (ngModel)="topic.title" name="title" id="title">titre</textarea>
+                </div>
+                <div class="col-12 mt-5">
+                    <label for="content">Contenu</label>
+                    <textarea class="form__content " (ngModel)="topic.content" name="content" id="content">contenu</textarea>
+                </div>
+                <div class="col-12 d-flex mt-5 justify-content-end">
+                    <p class="button__form__cancel mb-0 d-flex align-self-center mr-3" (click)="toggleTopicForm()">Annuler </p>
+                    <button class="button__form__post">Poster</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

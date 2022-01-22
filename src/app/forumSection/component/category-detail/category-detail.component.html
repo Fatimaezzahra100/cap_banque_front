@@ -5,6 +5,7 @@
     <div class="row">
         <h3>Messages sur le forum {{category.name}}</h3>
     </div>
+    <topic-create></topic-create>
     <div class="header mt-1 row">
         <div class="col-5 d-flex align-items-center">
             <input type="text" name="search" id="search">
@@ -31,12 +32,13 @@
                 <div class="d-flex mt-4">
                     <p>Par {{topic.user.username}}</p>
                     <p class="mb-0 ml-1">point</p>
-                    <p class="mb-0 ml-1">{{formatDate(topic.created_at.toString())}} {{formatHour(topic.created_at.toString())}}</p>
+                    <p class="mb-0 ml-1">{{formatDate(topic.created_at.toString())}}
+                        {{formatHour(topic.created_at.toString())}}</p>
                 </div>
             </div>
             <div class="col-3">
-                <p class="mb-0">{{getLastMessageData(topic.comments,"created_at")}}</p>
-                <p class="mb-0">Par {{getLastMessageData(topic.comments,"user")}}</p>
+                <p  *ngIf="topic.comments.length > 0" class="mb-0">{{getLastMessageData(topic.comments,"created_at")}}</p>
+                <p  *ngIf="topic.comments.length > 0" class="mb-0">Par {{getLastMessageData(topic.comments,"user")}}</p>
             </div>
             <div class="col-3">
                 <p class="text-center mb-0">{{topic.comments?.length}}</p>

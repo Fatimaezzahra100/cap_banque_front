@@ -21,6 +21,7 @@ import { SubCommentService } from './service/sub-comment.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UtilsService } from './service/utils';
 import { SubcommentCreateComponent } from './component/subcomment-create/subcomment-create.component';
+import { TopicCreateComponent } from './component/topic-create/topic-create.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'categories/:id', component: CategoryDetailComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
     SubCommentComponent,
     CommentCreateComponent,
     SubcommentCreateComponent,
+    TopicCreateComponent,
   ],
   imports: [
     CommonModule,
