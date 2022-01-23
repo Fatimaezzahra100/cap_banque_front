@@ -11,10 +11,6 @@
     <div class="topic__create__form" *ngIf="showTopicForm">
         <h2>Nouveau sujet dans le forum {{category.name}}</h2>
         <div>
-            <p class="mb-0">Avertissement de modération</p>
-    
-            <p class="mb-0"></p>
-    
             <form #topicForm="ngForm" (ngSubmit)="postTopic(topicForm.value)" action="#" class="row" method="post">
                 <div class="col-12 mt-3">
                     <label for="title">Titre</label>
@@ -22,10 +18,12 @@
                 </div>
                 <div class="col-12 mt-5">
                     <label for="content">Contenu</label>
-                    <textarea class="form__content " (ngModel)="topic.content" name="content" id="content">contenu</textarea>
+                    <textarea class="form__content " (ngModel)="topic.content" name="content"
+                        id="content">contenu</textarea>
                 </div>
                 <div class="col-12 d-flex mt-5 justify-content-end">
-                    <p class="button__form__cancel mb-0 d-flex align-self-center mr-3" (click)="toggleTopicForm()">Annuler </p>
+                    <p class="button__form__cancel mb-0 d-flex align-self-center mr-3" (click)="toggleTopicForm()">
+                        Annuler </p>
                     <button class="button__form__post">Poster</button>
                 </div>
             </form>

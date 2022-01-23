@@ -2,10 +2,11 @@
     text-decoration: none;
 }
 .header{
-    background-color: #DDDDDD;
+    background-color: #1c2935;
     padding:15px;
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .header input{
